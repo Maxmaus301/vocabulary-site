@@ -1,0 +1,118 @@
+:root{
+--color1: white;
+--maincolor: #8B8C7A
+}
+.bi {
+font-size: 40px;
+color: #274046;
+}
+.bi-house {
+color: white;
+}
+.bg2 {
+ background-color: #DCDCDC;
+}
+.color1 {
+var(maincolor);
+}
+.border-top{
+border-color: black;
+}
+.nav-link{
+color: blue;
+}
+.nav-link:focus, .nav-link:hover{
+color: tomato;
+}
+.px-my{
+padding-right: 5.5rem!important;
+padding-left: 5.5rem!important;
+}
+.item-inner {
+    border-color: tomato;
+    border-radius: 40px;
+    background-color: white;
+    padding: 24px 30px 32px 32px;
+    height: 100%;
+}
+.font1 {
+font-size: 1.5rem;
+color: #8B8C7A;
+}
+.font2 {
+font-size: 4rem;
+color: #8B8C7A;
+}
+.font3 {
+font-size: 2rem;
+color: #8B8C7A;
+}
+.font4 {
+font-size: 1rem;
+color: #8B8C7A;
+}
+.login-inner {
+    border-color: tomato;
+    border-radius: 40px;
+    background-color: white;
+    padding: 24px auto 32px;
+    width: 60%;
+    height: 100%;
+}
+.padding-login {
+padding-top: 6rem;
+padding-bottom: 6rem;
+}
+p {
+color: tomato;
+}
+.special {
+border-radius: 0.25rem;
+width: 70%;
+height: 35px;
+padding-inline: 10px;
+}
+.padding-right-login{
+margin: 0px 0px 50px 0px;
+}
+form {
+padding-top: 15px;
+}
+.bi-person-circle {
+margin-left: 5px;
+}
+.verticalLine{
+height: 70%;
+width: 3px;
+background-color: black;
+margin 5px auto 5px;
+}
+.bi-person-fill, .bi-shield-lock, .bi-r-circle {
+font-size: 37px;
+}
+.bi-house-fill, .bi-door-closed, .bi-database-add, .bi-tag, .bi-backpack {
+font-size: 30px;
+}
+a {
+color: blue;
+}
+a:hover, a:focus{
+color: tomato;
+}
+.special1 {
+border-radius: 0.25rem;
+width: 30%;
+height: 29px;
+padding-inline: 10px;
+}
+li {
+align-items: center;
+}
+.errorlist {
+list-style-type: none;
+}
+.dropdown-menu-logo {
+font-size: 25px;
+}
+
+

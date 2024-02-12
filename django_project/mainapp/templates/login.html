@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <title>Страница входа</title>
+    </head>
+    <body class="bg2">
+      <div class="container py-5">
+          <div class="row padding-login">
+              <div class="col-12" align="center">
+                  <div class="row login-inner justify-content-center">
+                      <div class="row">
+                          <i class="bi bi-person-circle py-1"></i>
+                      </div>
+                      <text class="font1 py-2"> Войти в личный кабинет </text>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-2">
+                                  <div class="row">
+                                      <div class="col-12" align="right">
+                                          <i class="bi bi-person-fill"></i>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-12" align="right">
+                                          <i class="bi bi-shield-lock"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-1">
+                                  <div class="verticalLine"></div>
+                              </div>
+                              <div class="col-6 padding-right-login">
+                                  <form method="post" action="">
+                                      {{ form.as_p }}
+                                      {% csrf_token %}
+                                      <button type="submit" class="btn btn-primary"> Войти </button>
+                                  </form>
+                                  <div class="container my-3">
+                                  <a id="href_to_reg" class="link-offset-2 link-underline link-underline-opacity-0"
+                                     href="{% url 'registration' %}"> Нет аккаунта? Зарегистрируйся </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </body>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-body-secondary color1">© Некоммерческий проект</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-telegram"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram"></i></a></li>
+        </ul>
+      </footer>
+  </div>

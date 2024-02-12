@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <title>Страница входа</title>
+
+    </head>
+    <body class="bg2">
+      <div class="container py-5">
+          <div class="row padding-login">
+              <div class="col-12" align="center">
+                  <div class="row login-inner justify-content-center">
+                      <div class="row">
+                          <i class="bi bi-r-circle py-1"></i>
+                      </div>
+                      <text class="font1 py-2"> Регистрация </text>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-12 padding-right-login">
+                                  <form method="post" action="">
+                                      {% csrf_token %}
+                                      {% for field in form %}
+                                      <p> {{ field }}</p>
+                                      {% if field.errors %}
+                                      <i class="bi-arrow-up-circle"></i>
+                                      {{ field.errors }}
+                                      {% endif %}
+                                      {% endfor %}
+                                      <button type="submit" class="btn btn-primary"> Регистрация </button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </body>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-body-secondary color1">© Некоммерческий проект</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-telegram"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram"></i></a></li>
+        </ul>
+      </footer>
+  </div>
