@@ -1,4 +1,6 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, HttpResponse
 from django.urls import reverse_lazy
 from django.urls import reverse
@@ -31,6 +33,15 @@ class UserProfileView(DetailView):
         context = super().get_context_data(**kwargs)
         context['categories'] = categories
         return context
+
+    def get(self, request, *args, **kwargs):
+        current_user = User.objects.filter(username=self.request.user.username).first()
+        current_slug = kwargs['slug']
+        if str(current_user) == current_slug:
+            return super().get(self, request, *args, **kwargs)
+        else:
+            return HttpResponse(f'Вы не можете перейти по данной странице, так как авторизованы, как {request.user}, '
+                                f'а не как {current_slug}')
 
 
 class MainView(View):
